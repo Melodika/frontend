@@ -15,6 +15,7 @@ describe('NewsItem', () => {
     return mount(NewsItem, {
       localVue,
       router,
+      stubs: ['font-awesome-icon'],
       ...options,
     })
   };

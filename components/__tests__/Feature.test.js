@@ -7,6 +7,7 @@ describe('Feature', () => {
 
     return mount(Feature, {
       localVue,
+      stubs: ['font-awesome-icon'],
       ...options,
     })
   };
