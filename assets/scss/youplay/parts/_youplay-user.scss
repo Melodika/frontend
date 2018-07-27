@@ -1,0 +1,103 @@
+@import "../../variables";
+
+.youplay-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.875rem;
+
+    .angled-img {
+        display: inline-block;
+        width: 150px;
+        vertical-align: top;
+        z-index: 10;
+
+        .img > img {
+            opacity: 1;
+        }
+        &:hover .img > img {
+            opacity: $images_hover_opacity;
+        }
+
+        .icon {
+            opacity: 0;
+        }
+        &:hover .icon {
+            opacity: .8;
+        }
+    }
+    .youplay-user__link {
+        text-decoration: none;
+    }
+    .user-data {
+        position: relative;
+        display: inline-block;
+        height: 151px;
+        padding: 1.125rem 1.875rem;
+        margin-left: -4px;
+
+        // background
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($back_darken_color, .4);
+            transform: skew(-$skew_size);
+            z-index: 1;
+        }
+        &.user-data_light::after {
+            background: rgba($back_grey_color, .4);
+        }
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .youplay-user__title {
+            margin-top: 0;
+            margin-bottom: .3rem;
+            font-size: 2.15rem;
+        }
+        // location
+        .location {
+            font-size: 0.625rem;
+            color: $text_mute_color;
+        }
+
+        // activity
+        .activity,
+        .youplay-user-activity {
+            margin-top: 1.3rem;
+
+            > div {
+                display: inline-block;
+                text-align: center;
+
+                + div {
+                    margin-left: 1.875rem;
+                }
+
+                .title {
+                    font-size: 0.625rem;
+                    color: $text_mute_color;
+                }
+
+                .num {
+                    font-size: 1.55rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+    .user-data_full {
+        flex: 1;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .youplay-user {
+        flex-direction: column;
+    }
+}

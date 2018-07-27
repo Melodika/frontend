@@ -1,0 +1,31 @@
+.fade-enter-active,
+.page-enter-active,
+.fade-leave-active,
+.page-leave-active {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+.fade-enter-active,
+.page-enter-active {
+    animation-name: fade-in;
+}
+.fade-leave-active,
+.page-leave-active {
+    animation-name: fade-out;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

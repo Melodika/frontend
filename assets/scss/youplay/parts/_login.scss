@@ -1,0 +1,36 @@
+.youplay-login {
+
+    // title
+    .youplay-hero .info h2 {
+        margin-top: 0;
+        margin-bottom: 1.875rem;
+        font-size: 1.55rem;
+    }
+
+    .youplay-form {
+        max-width: 500px;
+        margin: 1.875rem auto;
+
+        form {
+            margin-top: 1.25rem;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            margin: 0;
+        }
+
+        .social-list {
+            margin: 0;
+        }
+    }
+}
+
+.full.youplay-login,
+.full.youplay-login .youplay-hero {
+    min-height: 510px;
+}

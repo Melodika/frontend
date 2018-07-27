@@ -1,0 +1,20 @@
+.youplay-404 {
+
+    // title
+    .youplay-hero .info .h1 {
+        margin-top: 0;
+        margin-bottom: 1.875rem;
+        font-size: 5rem;
+    }
+
+    // search
+    form {
+        max-width: 400px;
+        margin: 1.875rem auto;
+    }
+}
+
+.full.youplay-404,
+.full.youplay-404 .youplay-hero {
+    min-height: 400px;
+}
